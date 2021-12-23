@@ -36,7 +36,7 @@ jobs:
   dev_build:
     docker:
       - image: cimg/node:14.13.0
-    working_directory: /build
+    # working_directory: /build
     steps:
       - checkout
       - run: node --version
@@ -49,7 +49,7 @@ jobs:
   pro_build:
     docker:
       - image: cimg/node:14.13.0
-    working_directory: /build
+    # working_directory: /build
     steps:
       - checkout
       - run:
