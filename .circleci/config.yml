@@ -45,7 +45,7 @@ jobs:
     steps:
       - checkout
       - run:
-        name: node --version
+          name: node --version
   dev_build:
     docker:
       - image: cimg/node:14.13.0
