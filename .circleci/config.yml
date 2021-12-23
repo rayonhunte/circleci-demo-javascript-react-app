@@ -34,9 +34,9 @@ jobs:
           command: npm run test
 
   dev_build:
-    working_directory: /tmp
     docker:
       - image: cimg/node:14.13.0
+    working_directory: /tmp
     steps:
       - checkout
       - run: node --version
@@ -47,9 +47,9 @@ jobs:
           name: Build extension
           command: npm run build      
   pro_build:
-    working_directory: /tmp
     docker:
       - image: cimg/node:14.13.0
+    working_directory: /tmp
     steps:
       - checkout
       - run:
