@@ -21,7 +21,6 @@ workflows:
                 - master
 
 jobs:
-  working_directory: /tmp
   run_test:
     docker:
       - image: cimg/node:14.13.0
@@ -35,6 +34,7 @@ jobs:
           command: npm run test
 
   dev_build:
+    working_directory: /tmp
     docker:
       - image: cimg/node:14.13.0
     steps:
@@ -47,6 +47,7 @@ jobs:
           name: Build extension
           command: npm run build      
   pro_build:
+    working_directory: /tmp
     docker:
       - image: cimg/node:14.13.0
     steps:
@@ -59,7 +60,6 @@ jobs:
           command: npm run build
       - store_artifacts:
         path: /tmp/build
-        destination: "https://console.cloud.google.com/storage/browser/chrome-extension-production;tab=objects?forceOnBucketsSortingFiltering=false&hl=ja&project=ctca-pitwall&prefix=&forceOnObjectsSortingFiltering=false ( https://console.cloud.google.com/storage/browser/chrome-extension-production;tab=objects?forceOnBucketsSortingFiltering=false&amp;hl=ja&amp;project=ctca-pitwall&amp;prefix=&amp;forceOnObjectsSortingFiltering=false)"
        
 
 
