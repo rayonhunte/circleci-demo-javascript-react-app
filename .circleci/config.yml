@@ -39,14 +39,17 @@ jobs:
       - run:
           name: Run test
           command: npm run test
+  
   build_and_deploy:
     docker:
       - image: google/cloud-sdk
-        docker:
-          - image: cimg/node:14.13.0 
+    docker:
+      - image: cimg/node:14.13.0 
     steps:
       - checkout
       - run: node --version
+  
+  
   dev_build:
     docker:
       - image: cimg/node:14.13.0
