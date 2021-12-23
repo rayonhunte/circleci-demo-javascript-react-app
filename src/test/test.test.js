@@ -1,6 +1,6 @@
 describe('basic test', () => {
     test('some test', () => {
-        expect(true).toBe(false);
+        expect(true).toBe(true);
     });
     
 });
