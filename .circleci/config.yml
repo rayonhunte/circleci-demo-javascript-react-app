@@ -44,8 +44,7 @@ jobs:
       - image: google/cloud-sdk
     steps:
       - checkout
-      - run:
-          name: node --version
+      - run: node --version
   dev_build:
     docker:
       - image: cimg/node:14.13.0
